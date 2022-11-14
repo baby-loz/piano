@@ -1,0 +1,60 @@
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #AD1A1A;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: gray;
+}
+
+.white:hover {
+background-color: #ccc
+}
+
+.black:hover {
+background-color: #171717;
+}
+
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
+
+.text {
+  color: white;
+}
